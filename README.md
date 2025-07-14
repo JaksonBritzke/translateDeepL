@@ -56,7 +56,7 @@ Crie/edite `src/main/resources/application.properties`:
 ```properties
 server.port=8080
 deepl.api.key=SUA_CHAVE_DEEPL_AQUI
-spring.web.cors.allowed-origins=http://localhost:4200
+spring.web.cors.allowed-origins=http://localhost:4201 ou a porta que for utilizada ao rodar o projeto front
 ```
 
 #### 2.3 Executar Backend
@@ -88,34 +88,6 @@ O frontend estará disponível em: `http://localhost:4200`
    - **PT**: Texto em português (ex: `Cadastro realizado com sucesso`)
 4. **Clique em "Traduzir"**
 5. **Os campos ES e EN** serão preenchidos automaticamente
-
-## 📁 Estrutura do Projeto
-
-```
-translateDeepL/
-├── backend/                          # Spring Boot API
-│   ├── src/main/java/com/example/translator/
-│   │   ├── controller/
-│   │   │   └── TranslateController.java
-│   │   ├── service/
-│   │   │   └── TranslateService.java
-│   │   └── TranslatorApplication.java
-│   ├── src/main/resources/
-│   │   └── application.properties
-│   └── pom.xml
-├── front/                            # Angular Frontend
-│   ├── src/app/
-│   │   ├── translate/
-│   │   │   ├── translate.component.ts
-│   │   │   ├── translate.component.html
-│   │   │   └── translate.component.css
-│   │   ├── app.component.html
-│   │   └── app.module.ts
-│   ├── angular.json
-│   └── package.json
-├── .gitignore
-└── README.md
-```
 
 ## 📦 Dependências Utilizadas
 
@@ -193,7 +165,7 @@ cd front && ng serve
 ## 🐛 Resolução de Problemas
 
 ### Erro de CORS
-Se houver problemas de CORS, verifique se o backend está configurado corretamente:
+Se houver problemas de CORS, verifique se o backend está configurado corretamente x porta do front:
 ```java
 @CrossOrigin(origins = "http://localhost:4200")
 ```
@@ -226,30 +198,9 @@ A versão gratuita tem limite de 500.000 caracteres/mês. Para mais informaçõe
 
 Este projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
 
-## 🤝 Contribuição
-
-1. Faça um Fork do projeto
-2. Crie uma branch para sua feature (`git checkout -b feature/NovaFuncionalidade`)
-3. Commit suas mudanças (`git commit -m 'Adiciona nova funcionalidade'`)
-4. Push para a branch (`git push origin feature/NovaFuncionalidade`)
-5. Abra um Pull Request
-
 ## 📞 Contato
-
 - **Autor**: Jakson Britzke
 - **GitHub**: [JaksonBritzke](https://github.com/JaksonBritzke)
 - **Projeto**: [translateDeepL](https://github.com/JaksonBritzke/translateDeepL)
-
-## 🎯 Próximas Features
-
-- [ ] Histórico de traduções
-- [ ] Suporte a mais idiomas
-- [ ] Exportação para CSV/JSON
-- [ ] Cache de traduções
-- [ ] Interface para gerenciar chaves
-- [ ] Autenticação de usuários
-- [ ] Docker para fácil deployment
-
----
 
 ⭐ **Se este projeto te ajudou, deixe uma estrela!** ⭐
