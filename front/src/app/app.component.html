@@ -19,18 +19,6 @@
             </div>
             
             <div class="mb-3">
-              <label for="es" class="form-label">Espanhol (ES)</label>
-              <textarea 
-                class="form-control" 
-                id="es" 
-                rows="4"
-                [(ngModel)]="es"
-                name="es"
-                readonly
-                placeholder="Tradução em espanhol aparecerá aqui..."></textarea>
-            </div>
-            
-            <div class="mb-3">
               <label for="en" class="form-label">Inglês (EN)</label>
               <textarea 
                 class="form-control" 
@@ -42,13 +30,25 @@
                 placeholder="Tradução em inglês aparecerá aqui..."></textarea>
             </div>
             
+            <div class="mb-3">
+              <label for="es" class="form-label">Espanhol (ES)</label>
+              <textarea 
+                class="form-control" 
+                id="es" 
+                rows="4"
+                [(ngModel)]="es"
+                name="es"
+                readonly
+                placeholder="Tradução em espanhol aparecerá aqui..."></textarea>
+            </div>
+            
             <div class="d-grid gap-2 d-md-flex justify-content-md-end">
               <button 
-                type="button" 
-                class="btn btn-secondary me-md-2" 
-                (click)="clear()">
-                Limpar
-              </button>
+              type="button" 
+              class="btn btn-secondary me-md-2" 
+              (click)="clear()">
+              Limpar
+            </button>
               <button 
                 type="button" 
                 class="btn btn-primary" 
