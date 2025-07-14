@@ -1,0 +1,48 @@
+# Backend (Spring Boot)
+backend/target/
+backend/.mvn/
+backend/mvnw
+backend/mvnw.cmd
+backend/HELP.md
+backend/.idea/
+backend/*.iws
+backend/*.iml
+backend/*.ipr
+backend/out/
+backend/.settings/
+backend/.project
+backend/.classpath
+
+# Frontend (Angular)
+front/node_modules/
+front/dist/
+front/.angular/
+front/.tmp/
+front/.sass-cache/
+front/connect.lock/
+front/coverage/
+front/libpeerconnection.log
+front/npm-debug.log*
+front/yarn-error.log
+front/testem.log
+front/typings/
+front/.idea/
+front/*.tgz
+front/*.tar.gz
+
+# Configurações sensíveis
+backend/src/main/resources/application.properties
+**/application-local.properties
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Logs
+*.log

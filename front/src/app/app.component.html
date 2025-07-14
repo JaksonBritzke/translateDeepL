@@ -1,0 +1,78 @@
+<!-- translate.component.html -->
+<div class="container mt-4">
+  <div class="row justify-content-center">
+    <div class="col-md-8">
+      <div class="card">
+        <div class="card-header bg-primary text-white">
+          <h4 class="mb-0">Tradutor</h4>
+        </div>
+        <div class="card-body">
+          <form>
+            <div class="mb-3">
+              <label for="keyValue" class="form-label">Chave (Key Value)</label>
+              <input
+                type="text"
+                class="form-control"
+                id="keyValue"
+                [(ngModel)]="keyValue"
+                name="keyValue"
+                placeholder="Ex: success.message">
+            </div>
+
+            <div class="mb-3">
+              <label for="pt" class="form-label">Português (PT)</label>
+              <textarea
+                class="form-control"
+                id="pt"
+                rows="3"
+                [(ngModel)]="pt"
+                name="pt"
+                placeholder="Digite o texto em português..."></textarea>
+            </div>
+
+            <div class="mb-3">
+              <label for="es" class="form-label">Espanhol (ES)</label>
+              <textarea
+                class="form-control"
+                id="es"
+                rows="3"
+                [(ngModel)]="es"
+                name="es"
+                readonly
+                placeholder="Tradução em espanhol aparecerá aqui..."></textarea>
+            </div>
+
+            <div class="mb-3">
+              <label for="en" class="form-label">Inglês (EN)</label>
+              <textarea
+                class="form-control"
+                id="en"
+                rows="3"
+                [(ngModel)]="en"
+                name="en"
+                readonly
+                placeholder="Tradução em inglês aparecerá aqui..."></textarea>
+            </div>
+
+            <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+              <button
+                type="button"
+                class="btn btn-secondary me-md-2"
+                (click)="clear()">
+                Limpar
+              </button>
+              <button
+                type="button"
+                class="btn btn-primary"
+                (click)="translate()"
+                [disabled]="isLoading">
+                <span *ngIf="isLoading" class="spinner-border spinner-border-sm me-2"></span>
+                {{ isLoading ? 'Traduzindo...' : 'Traduzir' }}
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
