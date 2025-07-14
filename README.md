@@ -6,8 +6,8 @@ Sistema simples de tradução automática integrando Angular 14 + Spring Boot + 
 
 MVP para tradução de textos do português para espanhol e inglês usando a API gratuita do DeepL. O sistema permite:
 
-- Criar chaves personalizadas para organização
 - Tradução automática PT → ES/EN
+- Interface simples e intuitiva
 - Interface responsiva com Bootstrap
 - Backend REST API em Spring Boot
 
@@ -83,11 +83,9 @@ O frontend estará disponível em: `http://localhost:4200`
 
 1. **Certifique-se de que o backend está rodando** em `http://localhost:8080`
 2. **Abra o navegador** em `http://localhost:4200`
-3. **Preencha os campos:**
-   - **Key Value**: Chave personalizada (ex: `success.message`)
-   - **PT**: Texto em português (ex: `Cadastro realizado com sucesso`)
+3. **Digite o texto** em português que deseja traduzir
 4. **Clique em "Traduzir"**
-5. **Os campos ES e EN** serão preenchidos automaticamente
+5. **Os campos ES e EN** serão preenchidos automaticamente com as traduções
 
 ## 📦 Dependências Utilizadas
 
@@ -125,7 +123,6 @@ O frontend estará disponível em: `http://localhost:4200`
 **Request:**
 ```json
 {
-  "key": "success.message",
   "text": "Cadastro realizado com sucesso"
 }
 ```
@@ -133,7 +130,6 @@ O frontend estará disponível em: `http://localhost:4200`
 **Response:**
 ```json
 {
-  "key": "success.message",
   "spanish": "Registro completado exitosamente",
   "english": "Registration completed successfully"
 }
@@ -202,5 +198,3 @@ Este projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para ma
 - **Autor**: Jakson Britzke
 - **GitHub**: [JaksonBritzke](https://github.com/JaksonBritzke)
 - **Projeto**: [translateDeepL](https://github.com/JaksonBritzke/translateDeepL)
-
-⭐ **Se este projeto te ajudou, deixe uma estrela!** ⭐
